@@ -911,7 +911,7 @@ class game_options 		{
 			y = 0.415981 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
 			h = 0.0560125 * safezoneH;
-			tooltip = "Sets how much local and simulated AI can spawn in the map. Affects performance and AI ""intelligence"". Use with caution. This is not an exact number as vehicles and squad leaders will allways spawn";
+			tooltip = "Sets how much local and simulated AI can spawn in the map. Affects performance and AI ""intelligence"". Use with caution. This is not an exact number as vehicles and squad leaders will always spawn";
 			action = "if (player == theBoss) then {closeDialog 0; nul = createDialog ""fps_limiter""} else {hint ""Only Player Commander has access to this function""};";
 		};
 		class 8slots_R2: RscButton
@@ -922,7 +922,7 @@ class game_options 		{
 			y = 0.415981 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
 			h = 0.0560125 * safezoneH;
-			tooltip = "Disables/Enable situational music";
+			tooltip = "Enable/disable situational music";
 			action = "closedialog 0; if (musicON) then {musicON = false; hint ""Music turned OFF""} else {musicON = true; hint ""Music turned ON""}; nul = execVM ""musica.sqf"";";
 		};
 		/*
@@ -1314,7 +1314,7 @@ class radio_comm 		{
 			y = 0.317959 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
 			h = 0.0560125 * safezoneH;
-			tooltip = "Look at some player and interact with him";
+			tooltip = "Look at a player and interact with him";
 			action = "closeDialog 0;if (isMultiPlayer) then {nul = createDialog ""player_money""} else {hint ""MP Only Menu""};";
 		};
 		class 8slots_L2: RscButton
@@ -1347,7 +1347,7 @@ class radio_comm 		{
 			y = 0.514003 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
 			h = 0.0560125 * safezoneH;
-			tooltip = "Vehicle or Static gun you're looking at will be garaged, interact with Flag to retrieve";
+			tooltip = "Garage the vehicle or static weapon that you're looking at, interact with a flag to retrieve";
 			action = "closeDialog 0; if (isMultiplayer && [player] call A3A_fnc_isMember) then {_nul = createDialog ""garage_check""} else {nul = [false] call A3A_fnc_garageVehicle};";
 		};
 		class 8slots_R3: RscButton
@@ -1561,7 +1561,7 @@ class squad_manager 			{
 			y = 0.317959 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
 			h = 0.0560125 * safezoneH;
-			tooltip = "Look at some vehicle and assign it to the selected squad for it's use";
+			tooltip = "Look at a vehicle and assign it to the selected squad";
 			action = "closeDialog 0;[] call A3A_fnc_addSquadVeh;";
 		};
 		class HQ_button_MG: RscButton
@@ -1641,7 +1641,7 @@ class AI_management 		{
 			y = 0.317959 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
 			h = 0.0560125 * safezoneH;
-			tooltip = "Take personal control of the selected squad member or HC squad leader and be able to perform any kind of actions for 60 seconds. Control state will be cancelled if the player or the controlled unit receives any kind of damage";
+			tooltip = "Take direct control of the selected squad member or HC squad leader and perform any kinds of actions for 60 seconds. Control state will be cancelled if the player or the controlled unit receive any kind of damage";
 		action = "closeDialog 0; if ((count groupselectedUnits player > 0) and (count hcSelected player > 0)) exitWith {hint ""You must select from HC or Squad Bars, not both""}; if (count groupselectedUnits player == 1) then {nul = [groupselectedUnits player] execVM ""REINF\controlunit.sqf""}; if (count hcSelected player == 1) then {nul = [hcSelected player] execVM ""REINF\controlHCsquad.sqf"";};";
 		};
 		class 8slots_R1: RscButton
@@ -1663,7 +1663,7 @@ class AI_management 		{
 			y = 0.415981 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
 			h = 0.0560125 * safezoneH;
-			tooltip = "AI squad mates will heal proactively each other";
+			tooltip = "AI squadmates will proactively heal each other";
 			action = "if (autoHeal) then {autoHeal = false; hint ""Auto Healing disabled"";} else {autoHeal = true; hint ""Auto Heal enabled""; nul = [] spawn A3A_fnc_autoHealFnc}";
 		};
 		class 8slots_R2: RscButton
@@ -1696,7 +1696,7 @@ class AI_management 		{
 			y = 0.514003 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
 			h = 0.0560125 * safezoneH;
-			tooltip = "Look at some vehicle and assign it to the selected squad for it's use";
+			tooltip = "Look at a vehicle and assign it to the selected squad";
 			action = "closeDialog 0;[] call A3A_fnc_addSquadVeh;";
 		};
 		class 8slots_L4: RscButton
@@ -1707,7 +1707,7 @@ class AI_management 		{
 			y = 0.612025 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
 			h = 0.0560125 * safezoneH;
-			tooltip = "Dimiss selected units or squads, recovering it's cost to the proper resource pool";
+			tooltip = "Dismiss selected units or squads, recovering their cost to the proper resource pool";
 			action = "closeDialog 0;if (count groupselectedUnits player > 0) then {nul = [groupselectedUnits player] execVM ""REINF\dismissPlayerGroup.sqf""} else {if (count (hcSelected player) > 0) then {nul = [hcSelected player] execVM ""REINF\dismissSquad.sqf""}}; if ((count groupselectedUnits player == 0) and (count hcSelected player == 0)) then {hint ""No units or squads selected""}";
 		};
 		class 8slots_R4: RscButton
@@ -1959,7 +1959,7 @@ class dismiss_menu 				{
 			y = 0.317959 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
 			h = 0.0560125 * safezoneH;
-			tooltip = "Dimiss selected units or squads, recovering it's cost to the proper resource pool";
+			tooltip = "Dismiss selected units or squads, recovering their cost to the proper resource pool";
 			action = "closeDialog 0;if (count groupselectedUnits player > 0) then {nul = [groupselectedUnits player] execVM ""REINF\dismissPlayerGroup.sqf""} else {if (count (hcSelected player) > 0) then {nul = [hcSelected player] execVM ""REINF\dismissSquad.sqf""}}; if ((count groupselectedUnits player == 0) and (count hcSelected player == 0)) then {hint ""No units or squads selected""}";
 		};
 		class HQ_button_Gstatic: RscButton
@@ -2062,7 +2062,7 @@ class construction_menu 	{
 			y = 0.415981 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
 			h = 0.0560125 * safezoneH;
-			tooltip = "Need to be built in garrison controlled zones and cost money";
+			tooltip = "Needs to be built in a garrison controlled zone and costs money";
 			action = "closeDialog 0;nul = createDialog ""bunker_menu""";
 		};
 	};
@@ -2624,7 +2624,7 @@ class rounds_number {
 		class HQ_frame: RscFrame
 		{
 			idc = -1;
-			text = "Select No. Rounds to be fired"; //--- ToDo: Localize;
+			text = "Select No. Rounds to fire"; //--- ToDo: Localize;
 			x = 0.254979 * safezoneW + safezoneX;
 			y = 0.233941 * safezoneH + safezoneY;
 			w = 0.425038 * safezoneW;

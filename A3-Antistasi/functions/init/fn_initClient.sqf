@@ -211,7 +211,7 @@ player addEventHandler ["FiredMan", {
 player addEventHandler ["HandleDamage", {
 	private _victim = param [0];
 	private _damage = param [2];
-	private _instigator = param [6];
+	private _instigator = param [3];
 	if(!isNull _instigator && isPlayer _instigator && _victim != _instigator && side _instigator == teamPlayer && _damage > 0.9) then {
 		[_instigator, 20, 0.21, _victim] remoteExec ["A3A_fnc_punishment",_instigator];
 		[format ["%1 was injured by %2 (UID: %3), %4m from HQ",name _victim,name _instigator,getPlayerUID _instigator,_victim distance2D posHQ]] remoteExec ["diag_log",2];

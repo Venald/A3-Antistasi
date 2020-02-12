@@ -1,21 +1,21 @@
 if (!isServer and hasInterface) exitWith {};
 
-private ["_costs","_groupX","_unit","_minesX","_radiusX","_roads","_truckX","_mineX","_countX"];
+private ["_mineX","_countX"];
 
-_costs = (server getVariable (SDKExp select 0)) + ([vehSDKRepair] call A3A_fnc_vehiclePrice);
+private _costs = (server getVariable (SDKExp select 0)) + ([vehSDKRepair] call A3A_fnc_vehiclePrice);
 
 [-1,-1*_costs] remoteExec ["A3A_fnc_resourcesFIA",2];
 
-_groupX = createGroup teamPlayer;
+private _groupX = createGroup teamPlayer;
 
-_unit = _groupX createUnit [(SDKExp select 0), getMarkerPos respawnTeamPlayer, [], 0, "NONE"];
+private _unit = _groupX createUnit [(SDKExp select 0), getMarkerPos respawnTeamPlayer, [], 0, "NONE"];
 _groupX setGroupId ["MineSw"];
-_minesX = [];
+private _minesX = [];
 sleep 1;
-_road = [getMarkerPos respawnTeamPlayer] call A3A_fnc_findNearestGoodRoad;
-_pos = position _road findEmptyPosition [1,30,"B_G_Van_01_transport_F"];
+private _road = [getMarkerPos respawnTeamPlayer] call A3A_fnc_findNearestGoodRoad;
+private _pos = position _road findEmptyPosition [1,30,"B_G_Van_01_transport_F"];
 
-_truckX = vehSDKRepair createVehicle _pos;
+private _truckX = vehSDKRepair createVehicle _pos;
 
 [_truckX] call A3A_fnc_AIVEHinit;
 [_unit] spawn A3A_fnc_FIAinit;

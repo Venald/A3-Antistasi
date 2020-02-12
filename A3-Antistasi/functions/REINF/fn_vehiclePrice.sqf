@@ -1,8 +1,6 @@
-private ["_typeX","_costs"];
+private _typeX = _this select 0;
 
-_typeX = _this select 0;
-
-_costs = server getVariable _typeX;
+private _costs = server getVariable _typeX;
 
 if (isNil "_costs") then
 	{

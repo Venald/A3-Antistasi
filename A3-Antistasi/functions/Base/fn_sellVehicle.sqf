@@ -1,5 +1,4 @@
-private ["_veh", "_costs","_typeX"];
-_veh = cursortarget;
+private _veh = cursortarget;
 
 if (isNull _veh) exitWith {hint "You are not looking to any vehicle"};
 
@@ -7,8 +6,8 @@ if (_veh distance getMarkerPos respawnTeamPlayer > 50) exitWith {hint "Vehicle m
 
 if ({isPlayer _x} count crew _veh > 0) exitWith {hint "In order to sell, vehicle must be empty."};
 
-_owner = _veh getVariable "ownerX";
-_exit = false;
+private _owner = _veh getVariable "ownerX";
+private _exit = false;
 if (!isNil "_owner") then
 	{
 	if (_owner isEqualType "") then
@@ -19,8 +18,8 @@ if (!isNil "_owner") then
 
 if (_exit) exitWith {hint "You are not owner of this vehicle and you cannot sell it"};
 
-_typeX = typeOf _veh;
-_costs = 0;
+private _typeX = typeOf _veh;
+private _costs = 0;
 
 if (_typeX in vehFIA) then
 {

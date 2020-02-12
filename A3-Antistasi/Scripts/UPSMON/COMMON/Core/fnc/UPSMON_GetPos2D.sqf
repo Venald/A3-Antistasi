@@ -11,19 +11,20 @@ Parameter(s):
 Returns:
 	Position
 ****************************************************************/
-private ["_pos","_dir","_dist","_cosU","_cosT","_relTX","_sinU","_sinT","_relTY","_newPos","_newPosX","_newPosY" ];
+params ["_pos","_dir","_dist"];
 
-_pos = _this select 0;
-_dir = _this select 1;
-_dist = _this select 2;
-			
 if (isnil "_pos") exitWith {}; 
-_targetX = _pos select 0; _targetY = _pos select 1; 
-			
+private _targetX = _pos select 0;
+private _targetY = _pos select 1; 
+
 //Calculamos posici�n 	
-_cosU = [_dir] call UPSMON_GetCOS;		_sinU = [_dir] call UPSMON_GetSIN;			
-_cosT = abs cos(_dir);				_sinT = abs sin(_dir);
-_relTX = _sinT * _dist * _cosU;  	_relTY = _cosT * _dist * _sinU;
-_newPosX = _targetX + _relTX;		_newPosY = _targetY + _relTY;		
-_newPos = [_newPosX,_newPosY];
+private _cosU = [_dir] call UPSMON_GetCOS;
+private _sinU = [_dir] call UPSMON_GetSIN;
+private _cosT = abs cos(_dir);
+private _sinT = abs sin(_dir);
+private _relTX = _sinT * _dist * _cosU;
+private _relTY = _cosT * _dist * _sinU;
+private _newPosX = _targetX + _relTX;
+private _newPosY = _targetY + _relTY;
+private _newPos = [_newPosX,_newPosY];
 _newPos;

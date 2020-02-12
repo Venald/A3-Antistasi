@@ -9,30 +9,11 @@ Parameter(s):
 Returns:
 
 ****************************************************************/
-private["_dir","_cos"];	
-	
-_dir=_this select 0; 
+private _dir=_this select 0; 
 if (isnil "_dir") exitWith {}; 
-if (_dir<90)  then  
+private _cos = -1;
+if (_dir<180)  then  
 {
 	_cos=1;
-} 
-else 
-{ 
-	if (_dir<180) then 
-	{
-		_cos=1;
-	}
-	else 
-	{ 
-		if (_dir<270) then 
-		{
-			_cos=-1;
-		}
-		else 
-		{
-			_cos=-1;
-		};				
-	};
 };
 _cos

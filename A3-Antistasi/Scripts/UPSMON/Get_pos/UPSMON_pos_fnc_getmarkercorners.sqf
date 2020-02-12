@@ -1,44 +1,38 @@
 //  In: marker
 // Out: array of positions
-private ["_area","_corners"];
-_area    = _this;
-_corners = [];
+private _area    = _this;
+private _corners = [];
 
 // Center point
-private ["_center","_centerX","_centerY"];
-_center  = getMarkerPos _area;
-_centerX = _center select 0;
-_centerY = _center select 1;
+private _center  = getMarkerPos _area;
+private _centerX = _center select 0;
+private _centerY = _center select 1;
 
 // Direction and make sure it's between 0 and 360.
-private ["_dir","_dirCos","_dirSin"];
-_dir    = (markerDir _area) * -1;
+private _dir    = (markerDir _area) * -1;
 _dir    = _dir % 360;
-_dirCos = cos _dir;
-_dirSin = sin _dir;
+private _dirCos = cos _dir;
+private _dirSin = sin _dir;
 
 // Size
-private ["_size","_sizeX","_sizeY"];
-_size  = getMarkerSize _area;
-_sizeX = _size select 0;
-_sizeY = _size select 1;
+private _size  = getMarkerSize _area;
+private _sizeX = _size select 0;
+private _sizeY = _size select 1;
 
 
-private ["_cosX","_sinX","_cosY","_sinY","_addX","_addY","_subX","_subY"];
-_cosX = _dirCos * _sizeX;
-_sinX = _dirSin * _sizeX;
-_cosY = _dirCos * _sizeY;
-_sinY = _dirSin * _sizeY;
+private _cosX = _dirCos * _sizeX;
+private _sinX = _dirSin * _sizeX;
+private _cosY = _dirCos * _sizeY;
+private _sinY = _dirSin * _sizeY;
 
-_addX = _cosX + _sinY;
-_addY = _sinX + _cosY;
-_subX = _cosX - _sinY;
-_subY = _sinX - _cosY;
+private _addX = _cosX + _sinY;
+private _addY = _sinX + _cosY;
+private _subX = _cosX - _sinY;
+private _subY = _sinX - _cosY;
 
-private ["_posX","_posY"];
 // Bottom Left
-_posX = _centerX - _subX;
-_posY = _centerY - _addY;
+private _posX = _centerX - _subX;
+private _posY = _centerY - _addY;
 _corners set [0,[_posX,_posY]];
 
 // Top Left
