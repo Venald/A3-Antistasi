@@ -25,5 +25,3 @@ A Persistent Whole Map Mission, for SP or MP co-op, focused on Resistance, Infan
 - Inside this folder you will find multiple subfolders, labeled `Antistasi-VersionNumber.MapName`
 - Use a PBO Packager to pack the any of these mission folders
 
-### Known Issues:
-For a list of known issues, please see the [Issues on Github](https://github.com/official-antistasi-community/A3-Antistasi-1.4/issues).
