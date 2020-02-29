@@ -781,7 +781,7 @@ class civ_vehicle 			{
 			x = 0.244979 * safezoneW + safezoneX;
 			y = 0.223941 * safezoneH + safezoneY;
 			w = 0.445038 * safezoneW;
-			h = 0.30 * safezoneH;
+			h = 0.60 * safezoneH;
 		};
 		class HQ_frame: RscFrame
 		{
@@ -790,7 +790,7 @@ class civ_vehicle 			{
 			x = 0.254979 * safezoneW + safezoneX;
 			y = 0.233941 * safezoneH + safezoneY;
 			w = 0.425038 * safezoneW;
-			h = 0.28 * safezoneH;
+			h = 0.56 * safezoneH;
 		};
 		class HQ_button_back: RscButton
 		{
