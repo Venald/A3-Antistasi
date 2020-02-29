@@ -660,14 +660,14 @@ timer setVariable [vehCSATPlaneAA,10,true];
 timer setVariable [vehNATOMRLS,0,true];
 timer setVariable [vehCSATMRLS,5,true];
 
-server setVariable [civCar,200,true];													//200
-server setVariable [civTruck,600,true];													//600
-server setVariable [civHeli,5000,true];													//5000
-server setVariable [civBoat,200,true];													//200
+server setVariable [civCar,125,true];													//125
+server setVariable [civTruck,200,true];													//600
+server setVariable [civHeli,700,true];													//5000
+server setVariable [civBoat,50,true];													//200
 server setVariable [vehSDKBike ,50,true];												//50
 server setVariable [vehSDKLightUnarmed,200,true];										//200
 server setVariable [vehSDKTruck,300,true];											//300
-{server setVariable [_x,700,true]} forEach [vehSDKLightArmed,vehSDKAT];
+{server setVariable [_x,250,true]} forEach [vehSDKLightArmed,vehSDKAT];
 {server setVariable [_x,400,true]} forEach [SDKMGStatic,vehSDKBoat,vehSDKRepair];			//400
 {server setVariable [_x,800,true]} forEach [SDKMortar,staticATteamPlayer,staticAAteamPlayer];			//800
 
