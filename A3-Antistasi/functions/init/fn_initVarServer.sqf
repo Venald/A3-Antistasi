@@ -671,6 +671,13 @@ server setVariable [vehSDKTruck,300,true];											//300
 {server setVariable [_x,400,true]} forEach [SDKMGStatic,vehSDKBoat,vehSDKRepair];			//400
 {server setVariable [_x,800,true]} forEach [SDKMortar,staticATteamPlayer,staticAAteamPlayer];			//800
 
+// Add Nyxes
+server setVariable [nyxAC,300,true];
+server setVariable [nyxSC,150,true];
+server setVariable [nyxAT,250,true];
+server setVariable [nyxAA,250,true];
+
+
 ///////////////////////
 //     GARRISONS    ///
 ///////////////////////
