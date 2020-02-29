@@ -843,6 +843,18 @@ class civ_vehicle 			{
 		 	h = 0.0560125 * safezoneH;
 		 	action = "closeDialog 0;[civBoat] spawn A3A_fnc_addFIAveh;";
 		 };
+		// Add a button for Nyx_AC TODO: Rest of the nyxes (AA,AT,Recon) 
+		class HQ_button_Nyx_AC: RscButton 
+		{
+			idc = 108;
+			text = "Nyx (AC)";
+			x = 0.272481 * safezoneW + safezoneX;
+		 	y = 0.21 * safezoneH + safezoneY;
+		 	w = 0.175015 * safezoneW;
+		 	h = 0.0560125 * safezoneH;
+		 	action = "closeDialog 0;[nyxAC] spawn A3A_fnc_addFIAveh;";
+
+		}
 	};
 };
 

@@ -670,6 +670,8 @@ server setVariable [vehSDKTruck,300,true];											//300
 {server setVariable [_x,250,true]} forEach [vehSDKLightArmed,vehSDKAT];
 {server setVariable [_x,400,true]} forEach [SDKMGStatic,vehSDKBoat,vehSDKRepair];			//400
 {server setVariable [_x,800,true]} forEach [SDKMortar,staticATteamPlayer,staticAAteamPlayer];			//800
+// TODO: fix pricing for nyx AC
+server setVariable [nyxAC,1,true]; // 1 for testing purposes
 
 ///////////////////////
 //     GARRISONS    ///

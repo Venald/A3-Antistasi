@@ -62,6 +62,9 @@ civTruck = "C_Van_01_transport_F";
 civHeli = "C_Heli_Light_01_civil_F";
 civBoat = "C_Boat_Transport_02_F";
 
+// Nyxes
+nyxAC = "I_LT_01_cannon_F";
+
 ////////////////////////////////////
 //        STATIC WEAPONS         ///
 ////////////////////////////////////
