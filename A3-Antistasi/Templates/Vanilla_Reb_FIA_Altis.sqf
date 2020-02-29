@@ -63,7 +63,10 @@ civHeli = "C_Heli_Light_01_civil_F";
 civBoat = "C_Boat_Transport_02_F";
 
 // Nyxes
-nyxAC = "I_LT_01_cannon_F";
+nyxAT = "I_LT_01_AT_F"; // AT 
+nyxSC = "I_LT_01_scout_F"; // Scout nyx
+nyxAA = "I_LT_01_AA_F"; // AA
+nyxAC = "I_LT_01_cannon_F"; // Auto Cannon
 
 ////////////////////////////////////
 //        STATIC WEAPONS         ///

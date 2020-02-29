@@ -843,18 +843,49 @@ class civ_vehicle 			{
 		 	h = 0.0560125 * safezoneH;
 		 	action = "closeDialog 0;[civBoat] spawn A3A_fnc_addFIAveh;";
 		 };
-		// Add a button for Nyx_AC TODO: Rest of the nyxes (AA,AT,Recon) 
+		// Add Nyxes to buy menu
 		class HQ_button_Nyx_AC: RscButton 
 		{
 			idc = 108;
-			text = "Nyx (AC)";
+			text = "Nyx (20 mm)";
 			x = 0.272481 * safezoneW + safezoneX;
-		 	y = 0.21 * safezoneH + safezoneY;
+		 	y = 0.514003 * safezoneH + safezoneY;
 		 	w = 0.175015 * safezoneW;
 		 	h = 0.0560125 * safezoneH;
 		 	action = "closeDialog 0;[nyxAC] spawn A3A_fnc_addFIAveh;";
 
-		}
+		};
+		class HQ_button_Nyx_AT: RscButton 
+		{
+			idc = 109;
+			text = "Nyx (AT)";
+			x = 0.482498 * safezoneW + safezoneX;
+		 	y = 0.514003 * safezoneH + safezoneY;
+		 	w = 0.175015 * safezoneW;
+		 	h = 0.0560125 * safezoneH;
+		 	action = "closeDialog 0;[nyxAT] spawn A3A_fnc_addFIAveh;";
+		};
+		class HQ_button_Nyx_SC: RscButton 
+		{
+			idc = 110;
+			text = "Nyx (Recon)";
+			x = 0.272481 * safezoneW + safezoneX;
+		 	y = 0.612025 * safezoneH + safezoneY;
+		 	w = 0.175015 * safezoneW;
+		 	h = 0.0560125 * safezoneH;
+		 	action = "closeDialog 0;[nyxSC] spawn A3A_fnc_addFIAveh;";
+
+		};
+		class HQ_button_Nyx_AA: RscButton 
+		{
+			idc = 111;
+			text = "Nyx (AA)";
+			x = 0.482498 * safezoneW + safezoneX;
+		 	y = 0.612025 * safezoneH + safezoneY;
+		 	w = 0.175015 * safezoneW;
+		 	h = 0.0560125 * safezoneH;
+		 	action = "closeDialog 0;[nyxAA] spawn A3A_fnc_addFIAveh;";
+		};
 	};
 };
 
