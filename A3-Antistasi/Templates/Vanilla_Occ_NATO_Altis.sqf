@@ -132,15 +132,15 @@ groupsNATOGen = [policeOfficer,policeGrunt];
 //Military Vehicles
 //Lite
 vehNATOBike = "B_Quadbike_01_F";
-vehNATOLightArmed = ["B_MRAP_01_hmg_F"];
-vehNATOLightUnarmed = ["B_MRAP_01_F"];
+vehNATOLightArmed = ["B_MRAP_01_hmg_F","B_MRAP_01_gmg_F","B_LSV_01_AT_F"];
+vehNATOLightUnarmed = ["B_MRAP_01_F","B_LSV_01_unarmed_F"];
 vehNATOTrucks = ["B_Truck_01_transport_F","B_Truck_01_covered_F"];
 vehNATOCargoTrucks = ["B_Truck_01_cargo_F", "B_Truck_01_flatbed_F"];
 vehNATOAmmoTruck = "B_Truck_01_ammo_F";
 vehNATORepairTruck = "B_Truck_01_repair_F";
 vehNATOLight = vehNATOLightArmed + vehNATOLightUnarmed;
 //Armored
-vehNATOAPC = ["B_APC_Wheeled_01_cannon_F","B_APC_Tracked_01_rcws_F"];
+vehNATOAPC = ["B_APC_Wheeled_01_cannon_F","B_APC_Tracked_01_rcws_F","B_AFV_Wheeled_01_cannon_F","B_AFV_Wheeled_01_up_cannon_F","B_APC_Tracked_01_CRV_F","B_MBT_01_arty_F"];
 vehNATOTank = "B_MBT_01_cannon_F";
 vehNATOAA = "B_APC_Tracked_01_AA_F";
 vehNATOAttack = vehNATOAPC + [vehNATOTank];
