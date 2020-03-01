@@ -486,7 +486,11 @@ private _templateVariables = [
 	"MortStaticCSATB",
 	"supportStaticCSATB",
 	"supportStaticCSATB2",
-	"supportStaticCSATB3"
+	"supportStaticCSATB3",
+	"nyxAA",
+	"nyxAC",
+	"nyxAT",
+	"nyxSC"
 ];
 
 {
